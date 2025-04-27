@@ -293,24 +293,26 @@ func handleRequestInner(spec RouteSpec, w http.ResponseWriter, r *http.Request, 
 		}
 	}
 
-	validSecret := false
-
-	if spec.RequiresSecret {
-		// We know the field exists
-		secretField := req.FieldByName("Secret")
-		secret := secretField.String()
-
-		if apiSecret != "" && secret == apiSecret {
-			validSecret = true
-		} else {
-			return nil, http.StatusForbidden, ErrInvalidSecret
-		}
-	}
-
 	// Sometimes it's a pointer, sometimes it's not??
 	// Motd is, but pinfo isn't... strange. Whatever
 	if req.Kind() == reflect.Ptr {
 		req = req.Elem()
+	}
+
+	validSecret := false
+
+	secretField := req.FieldByName("Secret")
+
+	if secretField.IsValid() {
+		secret := secretField.String()
+
+		if apiSecret != "" && secret == apiSecret {
+			validSecret = true
+		}
+	}
+
+	if spec.RequiresSecret && !validSecret {
+		return nil, http.StatusForbidden, ErrInvalidSecret
 	}
 
 	return spec.Exec(req.Interface(), validSecret, r)
