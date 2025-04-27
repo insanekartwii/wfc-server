@@ -235,6 +235,7 @@ func HandleRequest(path string, w http.ResponseWriter, r *http.Request) bool {
 			logging.Error("API", "Failed to marshal json!", aurora.Cyan(err))
 		}
 
+		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Content-Length", strconv.Itoa(len(jsonData)))
 		w.WriteHeader(code)
 		w.Write(jsonData)
