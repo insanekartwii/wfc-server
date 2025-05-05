@@ -31,13 +31,13 @@ var QueryRoute = MakeRouteSpec[QueryRequest, QueryResponse](
 )
 
 var (
-	ErrInvalidIPFormat = errors.New("Invalid IP Format. IPs must be in the format '%d.%d.%d.%d'.")
+	ErrInvalidIPFormat = errors.New("Invalid IP Format. IPs must be in the format 'xx.xx.xx.xx'.")
 	ErrInvalidDeviceID = errors.New("DeviceID cannot be 0.")
 	ErrInvalidCsnum    = errors.New("Csnums must be less than 16 characters long and match the format '^[a-zA-Z0-9]+$'.")
 	ErrInvalidHasBan   = errors.New("HasBan must be either 0 (Either), 1 (No Ban), 2 (Ban)")
 	ErrEmptyParams     = errors.New("At least one of IP, Csnum, and DeviceID must be nonzero or nonempty")
 
-	ipRegex    = regexp.MustCompile(`\d\.\d\.\d\.`)
+	ipRegex    = regexp.MustCompile(`^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$`)
 	csnumRegex = regexp.MustCompile(`^[a-zA-Z0-9]+$`)
 )
 
