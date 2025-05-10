@@ -253,6 +253,8 @@ func (g *GameSpySession) login(command common.GameSpyCommand) {
 			region = database.R_NTSCJ
 		case "RMCP":
 			region = database.R_PAL
+		case "RMCK":
+			region = database.R_NTSCK
 		default:
 			logging.Error(g.ModuleName, "Invalid gamecd:", aurora.Cyan(gamecd))
 			g.replyError(ErrLoginBadRegion)
