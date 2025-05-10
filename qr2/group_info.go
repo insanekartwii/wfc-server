@@ -110,9 +110,15 @@ func getGroupsRaw(gameNames []string, groupNames []string) []GroupInfo {
 
 			if login := session.login; login != nil {
 				mapData["+ingamesn"] = login.InGameName
-				mapData["+openhost"] = strconv.FormatBool(login.OpenHost)
+
+				if groupInfo.MatchType == "anybody" {
+					mapData["+openhost"] = strconv.FormatBool(login.OpenHost)
+				} else {
+					mapData["+openhost"] = ""
+				}
 			} else {
 				mapData["+ingamesn"] = ""
+				mapData["+openhost"] = ""
 			}
 
 			groupInfo.PlayersRaw[mapData["+joinindex"]] = mapData
