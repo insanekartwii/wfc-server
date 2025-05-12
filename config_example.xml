@@ -54,6 +54,9 @@
     -->
     <allowMultipleCsnums>SameIPAddress</allowMultipleCsnums>
 
+    <!-- Require hashes to be submitted to log in -->
+    <enableHashCheck>true</enableHashCheck>
+
     <!-- Database Credentials -->
     <username>username</username>
     <password>password</password>

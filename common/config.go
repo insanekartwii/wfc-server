@@ -48,6 +48,8 @@ type Config struct {
 
 	AllowMultipleCsnums string `xml:"allowMultipleCsnums"`
 
+	EnableHashCheck bool `xml:"enableHashCheck"`
+
 	ServerName string `xml:"serverName,omitempty"`
 }
 

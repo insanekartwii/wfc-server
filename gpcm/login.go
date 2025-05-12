@@ -197,7 +197,7 @@ func (g *GameSpySession) login(command common.GameSpyCommand) {
 		}
 	}
 
-	if g.GameName == "mariokartwii" {
+	if g.GameName == "mariokartwii" && common.GetConfig().EnableHashCheck {
 		packIDStr, exists := command.OtherValues["pack_id"]
 		if exists {
 			logging.Info(g.ModuleName, "pack_id:", aurora.Cyan(packIDStr))
