@@ -70,7 +70,6 @@ func (g *GameSpySession) handleFriendBot() {
 	}
 	
 	logging.Info(g.ModuleName, "FriendBot verification progressed to step 2")
-	// TODO: Change discord ID to "2" to indicate step 2, but change it in the actual database
 	SetSessionDiscordID(g.User.ProfileId, "2")
 	err := g.User.UpdateDiscordID(pool, ctx, "2")
 	if err != nil {
@@ -96,7 +95,6 @@ func (g *GameSpySession) isBm1AuthMessageNeeded() bool {
 func (g *GameSpySession) addFriend(command common.GameSpyCommand) {
 	strNewProfileId := command.OtherValues["newprofileid"]
 
-	logging.Info(g.ModuleName, "Add friend:", aurora.Cyan(strNewProfileId), "FriendBot:", aurora.Cyan(config.FriendBotPID))
 	if strNewProfileId == config.FriendBotPID {
 		logging.Info(g.ModuleName, "Attempt to add FriendBot as a friend")
 		g.handleFriendBot()
