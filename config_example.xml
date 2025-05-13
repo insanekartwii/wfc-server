@@ -81,6 +81,9 @@
     -->
     <logOutput>StdOutAndFile</logOutput>
 
+    <!-- FriendBot PID -->
+    <friendBotPID>1234</friendBotPID>
+
     <!-- API secret -->
     <apiSecret>hQ3f57b3tW2WnjJH3v</apiSecret>
 </Config>

@@ -13,6 +13,7 @@ type QueryRequest struct {
 	IP       string `json:"ip"`
 	DeviceID uint32 `json:"deviceID"`
 	Csnum    string `json:"csnum"`
+	DiscordID string `json:"discordId"`	
 	// 0: Either, 1: No Ban, 2: Ban
 	HasBan byte `json:"hasban"`
 }
@@ -34,9 +35,9 @@ var (
 	ErrInvalidIPFormat = errors.New("Invalid IP Format. IPs must be in the format 'xx.xx.xx.xx'.")
 	ErrInvalidDeviceID = errors.New("DeviceID cannot be 0.")
 	ErrInvalidCsnum    = errors.New("Csnums must be less than 16 characters long and match the format '^[a-zA-Z0-9]+$'.")
+	ErrInvalidDiscordID = errors.New("Discord ID must be less than 18 characters long.")
 	ErrInvalidHasBan   = errors.New("HasBan must be either 0 (Either), 1 (No Ban), 2 (Ban)")
 	ErrEmptyParams     = errors.New("At least one of IP, Csnum, and DeviceID must be nonzero or nonempty")
-
 	ipRegex    = regexp.MustCompile(`^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$`)
 	csnumRegex = regexp.MustCompile(`^[a-zA-Z0-9]+$`)
 )
@@ -54,11 +55,15 @@ func HandleQuery(req any, _ bool, _ *http.Request) (any, int, error) {
 		return nil, http.StatusBadRequest, ErrInvalidCsnum
 	}
 
+	if _req.DiscordID != "" && len(_req.DiscordID) > 18 {
+		return nil, http.StatusBadRequest, ErrInvalidDiscordID
+	}
+
 	if _req.HasBan != 0 && _req.HasBan != 1 && _req.HasBan != 2 {
 		return nil, http.StatusBadRequest, ErrInvalidHasBan
 	}
 
-	if _req.IP == "" && _req.Csnum == "" && _req.DeviceID == 0 {
+	if _req.IP == "" && _req.Csnum == "" && _req.DeviceID == 0 && _req.DiscordID == "" {
 		return nil, http.StatusBadRequest, ErrEmptyParams
 	}
 
@@ -74,6 +79,10 @@ func HandleQuery(req any, _ bool, _ *http.Request) (any, int, error) {
 
 	if _req.Csnum != "" {
 		query += fmt.Sprintf(" '%s' = ANY(csnum) AND", _req.Csnum)
+	}
+
+	if _req.DiscordID != "" {
+		query += fmt.Sprintf(" discord_id = '%s' AND", _req.DiscordID)
 	}
 
 	if _req.HasBan == 1 {
