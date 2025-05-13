@@ -158,8 +158,9 @@ func GetProfile(pool *pgxpool.Pool, ctx context.Context, profileId uint32) (User
 	var lastIPAddress *string
 	var banModerator *string
 	var banHiddenReason *string
+	var discordID *string
 
-	err := row.Scan(&user.UserId, &user.GsbrCode, &user.NgDeviceId, &user.Email, &user.UniqueNick, &firstName, &lastName, &user.Restricted, &banReason, &user.OpenHost, &lastInGameSn, &lastIPAddress, &user.Csnum, &user.DiscordID, &banModerator, &banHiddenReason, &user.BanIssued, &user.BanExpires)
+	err := row.Scan(&user.UserId, &user.GsbrCode, &user.NgDeviceId, &user.Email, &user.UniqueNick, &firstName, &lastName, &user.Restricted, &banReason, &user.OpenHost, &lastInGameSn, &lastIPAddress, &user.Csnum, &discordID, &banModerator, &banHiddenReason, &user.BanIssued, &user.BanExpires)
 
 	if err != nil {
 		return User{}, err
@@ -193,6 +194,10 @@ func GetProfile(pool *pgxpool.Pool, ctx context.Context, profileId uint32) (User
 
 	if banHiddenReason != nil {
 		user.BanReasonHidden = *banHiddenReason
+	}
+
+	if discordID != nil {
+		user.DiscordID = *discordID
 	}
 
 	return user, nil
