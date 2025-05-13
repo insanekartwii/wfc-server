@@ -16,13 +16,14 @@ const (
 	UpdateUserProfileID     = `UPDATE users SET profile_id = $3 WHERE user_id = $1 AND gsbrcd = $2`
 	UpdateUserNGDeviceID    = `UPDATE users SET ng_device_id = $2 WHERE profile_id = $1`
 	UpdateUserCsnum         = `UPDATE users SET csnum = $2 WHERE profile_id = $1`
-	GetUser                 = `SELECT user_id, gsbrcd, ng_device_id, email, unique_nick, firstname, lastname, has_ban, ban_reason, open_host, last_ingamesn, last_ip_address, csnum, ban_moderator, ban_reason_hidden, ban_issued, ban_expires FROM users WHERE profile_id = $1`
+	GetUser                 = `SELECT user_id, gsbrcd, ng_device_id, email, unique_nick, firstname, lastname, has_ban, ban_reason, open_host, last_ingamesn, last_ip_address, csnum, discord_id, ban_moderator, ban_reason_hidden, ban_issued, ban_expires FROM users WHERE profile_id = $1`
 	ClearProfileQuery       = `DELETE FROM users WHERE profile_id = $1 RETURNING user_id, gsbrcd, email, unique_nick, firstname, lastname, open_host, last_ip_address, last_ingamesn, csnum`
 	DoesUserExist           = `SELECT EXISTS(SELECT 1 FROM users WHERE user_id = $1 AND gsbrcd = $2)`
 	IsProfileIDInUse        = `SELECT EXISTS(SELECT 1 FROM users WHERE profile_id = $1)`
 	DeleteUserSession       = `DELETE FROM sessions WHERE profile_id = $1`
-	GetUserProfileID        = `SELECT profile_id, ng_device_id, email, unique_nick, firstname, lastname, open_host, last_ip_address, csnum FROM users WHERE user_id = $1 AND gsbrcd = $2`
+	GetUserProfileID        = `SELECT profile_id, ng_device_id, email, unique_nick, firstname, lastname, open_host, discord_id, last_ip_address, csnum FROM users WHERE user_id = $1 AND gsbrcd = $2`
 	UpdateUserLastIPAddress = `UPDATE users SET last_ip_address = $2, last_ingamesn = $3 WHERE profile_id = $1`
+	UpdateDiscordID         = `UPDATE users SET discord_id = $2 WHERE profile_id = $1`
 	UpdateUserBan           = `UPDATE users SET has_ban = true, ban_issued = $2, ban_expires = $3, ban_reason = $4, ban_reason_hidden = $5, ban_moderator = $6, ban_tos = $7 WHERE profile_id = $1`
 	DisableUserBan          = `UPDATE users SET has_ban = false WHERE profile_id = $1`
 
@@ -46,6 +47,7 @@ type User struct {
 	LastInGameSn       string
 	LastIPAddress      string
 	Csnum              []string
+	DiscordID          string
 	// Following fields only used in GetUser query
 	BanModerator    string
 	BanReasonHidden string
@@ -104,6 +106,14 @@ func (user *User) UpdateProfileID(pool *pgxpool.Pool, ctx context.Context, newPr
 	return err
 }
 
+func (user *User) UpdateDiscordID(pool *pgxpool.Pool, ctx context.Context, discordId string) error {
+	_, err := pool.Exec(ctx, UpdateDiscordID, user.ProfileId, discordId)
+	if err == nil {
+		user.DiscordID = discordId
+	}
+	return err
+}
+
 func GetUniqueUserID() uint64 {
 	// Not guaranteed unique but doesn't matter in practice if multiple people have the same user ID.
 	return uint64(rand.Int63n(0x80000000000))
@@ -148,8 +158,9 @@ func GetProfile(pool *pgxpool.Pool, ctx context.Context, profileId uint32) (User
 	var lastIPAddress *string
 	var banModerator *string
 	var banHiddenReason *string
+	var discordID *string
 
-	err := row.Scan(&user.UserId, &user.GsbrCode, &user.NgDeviceId, &user.Email, &user.UniqueNick, &firstName, &lastName, &user.Restricted, &banReason, &user.OpenHost, &lastInGameSn, &lastIPAddress, &user.Csnum, &banModerator, &banHiddenReason, &user.BanIssued, &user.BanExpires)
+	err := row.Scan(&user.UserId, &user.GsbrCode, &user.NgDeviceId, &user.Email, &user.UniqueNick, &firstName, &lastName, &user.Restricted, &banReason, &user.OpenHost, &lastInGameSn, &lastIPAddress, &user.Csnum, &discordID, &banModerator, &banHiddenReason, &user.BanIssued, &user.BanExpires)
 
 	if err != nil {
 		return User{}, err
@@ -183,6 +194,10 @@ func GetProfile(pool *pgxpool.Pool, ctx context.Context, profileId uint32) (User
 
 	if banHiddenReason != nil {
 		user.BanReasonHidden = *banHiddenReason
+	}
+
+	if discordID != nil {
+		user.DiscordID = *discordID
 	}
 
 	return user, nil

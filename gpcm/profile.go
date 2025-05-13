@@ -97,6 +97,20 @@ func (g *GameSpySession) updateProfile(command common.GameSpyCommand) {
 	g.User.UpdateProfile(pool, ctx, command.OtherValues)
 }
 
+func SetSessionDiscordID(profileId uint32, discordId string) {
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	if session, exists := sessions[profileId]; exists {
+		session.User.DiscordID = discordId
+		logging.Info("GPCM", "Set Discord ID for profile", aurora.Cyan(profileId), "to", aurora.Cyan(discordId))
+	} else {
+		logging.Info("GPCM", "Session not found for profile ID", aurora.Cyan(profileId))
+	}
+
+	
+}
+
 func VerifyPlayerSearch(profileId uint32, sessionKey int32, gameName string) (string, bool) {
 	mutex.Lock()
 	defer mutex.Unlock()
