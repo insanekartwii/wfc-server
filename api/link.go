@@ -4,6 +4,7 @@ import (
 	"errors"
 	"net/http"
 	"wwfc/database"
+	"wwfc/gpcm"
 )
 
 
@@ -56,6 +57,7 @@ func HandleLink(req LinkRequest, _ bool) (*database.User, int, error) {
 		if user.DiscordID != "" {
 			return nil, http.StatusForbidden, ErrDiscordLinked
 		}
+		gpcm.SetSessionDiscordID(user.ProfileId, "1")
 		err = user.UpdateDiscordID(pool, ctx, "1")
 		if err != nil {
 			return nil, http.StatusInternalServerError, err
@@ -64,6 +66,7 @@ func HandleLink(req LinkRequest, _ bool) (*database.User, int, error) {
 		if user.DiscordID != "2" {
 			return nil, http.StatusForbidden, ErrDiscordWrongStep
 		}
+		gpcm.SetSessionDiscordID(user.ProfileId, req.DiscordID)
 		err = user.UpdateDiscordID(pool, ctx, req.DiscordID)
 		if err != nil {
 			return nil, http.StatusInternalServerError, err

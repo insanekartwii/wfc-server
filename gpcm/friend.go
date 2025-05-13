@@ -63,18 +63,20 @@ func (g *GameSpySession) getAuthorizedFriendIndex(profileId uint32) int {
 }
 
 func (g *GameSpySession) handleFriendBot() {
-	if g.User.DiscordID == "" {
-		logging.Warn(g.ModuleName, "FriendBot is added but verification is not initialized")
+
+	if g.User.DiscordID != "1" {
+		logging.Warn(g.ModuleName, "FriendBot is added but verification is not initialized, currently", g.User.DiscordID)
 		return
 	}
-	if g.User.DiscordID == "1" {
-		logging.Info(g.ModuleName, "FriendBot verification progressed to step 2")
-		// TODO: Change discord ID to "2" to indicate step 2, but change it in the actual database
-		err := g.User.UpdateDiscordID(pool, ctx, "2")
-		if err != nil {
-			logging.Error(g.ModuleName, "Failed to update discord ID:", err)
-		return
-		}
+	
+	logging.Info(g.ModuleName, "FriendBot verification progressed to step 2")
+	// TODO: Change discord ID to "2" to indicate step 2, but change it in the actual database
+	SetSessionDiscordID(g.User.ProfileId, "2")
+	err := g.User.UpdateDiscordID(pool, ctx, "2")
+	if err != nil {
+		logging.Error(g.ModuleName, "Failed to update discord ID:", err)
+	return
+	
 	}
 }
 
