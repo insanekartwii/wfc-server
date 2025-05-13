@@ -65,7 +65,6 @@ func (g *GameSpySession) getAuthorizedFriendIndex(profileId uint32) int {
 func (g *GameSpySession) handleFriendBot() {
 	if g.User.DiscordID == "" {
 		logging.Warn(g.ModuleName, "FriendBot is added but verification is not initialized")
-		g.replyError(ErrAddFriendBadNew)
 		return
 	}
 	if g.User.DiscordID == "1" {
@@ -74,7 +73,6 @@ func (g *GameSpySession) handleFriendBot() {
 		err := g.User.UpdateDiscordID(pool, ctx, "2")
 		if err != nil {
 			logging.Error(g.ModuleName, "Failed to update discord ID:", err)
-			g.replyError(ErrDatabase)
 		return
 		}
 	}
@@ -96,6 +94,7 @@ func (g *GameSpySession) isBm1AuthMessageNeeded() bool {
 func (g *GameSpySession) addFriend(command common.GameSpyCommand) {
 	strNewProfileId := command.OtherValues["newprofileid"]
 
+	logging.Info(g.ModuleName, "Add friend:", aurora.Cyan(strNewProfileId), "FriendBot:", aurora.Cyan(config.FriendBotPID))
 	if strNewProfileId == config.FriendBotPID {
 		logging.Info(g.ModuleName, "Attempt to add FriendBot as a friend")
 		g.handleFriendBot()
