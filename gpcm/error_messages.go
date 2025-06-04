@@ -5,47 +5,47 @@ var (
 		ErrorCode: 22000,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Retro WFCへの ログイン中に\n" +
+				"IKWFCへの ログイン中に\n" +
 				"不明なエラー が発生しました\n" +
 				"\n" +
 				"エラーコード： %[1]d",
 			LangEnglish: "" +
 				"An unknown error has occurred\n" +
-				"while logging in to Retro WFC.\n" +
+				"while logging in to IKWFC.\n" +
 				"\n" +
 				"Error Code: %[1]d",
 			LangGerman: "" +
 				"Ein unbekannter Fehler ist beim\n" +
-				"Verbinden mit Retro WFC aufgetreten.\n" +
+				"Verbinden mit IKWFC aufgetreten.\n" +
 				"\n" +
 				"Fehlercode: %[1]d",
 			LangSpanish: "" +
 				"Un error desconocido ha ocurrido\n" +
-				"al conectarse a Retro WFC.\n" +
+				"al conectarse a IKWFC.\n" +
 				"\n" +
 				"Código de error: %[1]d",
 			LangItalian: "" +
 				"È stato riscontrato un errore sconosciuto\n" +
-				"durante l'accesso alla Retro WFC.\n" +
+				"durante l'accesso alla IKWFC.\n" +
 				"\n" +
 				"Codice Errore: %[1]d",
 			LangDutch: "" +
 				"Er is een onbekende fout opgetreden\n" +
-				"tijdens het verbinden met Retro WFC.\n" +
+				"tijdens het verbinden met IKWFC.\n" +
 				"\n" +
 				"Foutcode: %[1]d",
 			LangKorean: "" +
-				"Retro WFC에 연결 도중\n" +
+				"IKWFC에 연결 도중\n" +
 				"알 수 없는 오류가 발생했습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d",
 			LangCzech: "" +
-				"Při přihlašování k Retro WFC\n" +
+				"Při přihlašování k IKWFC\n" +
 				"došlo k neznámé chybě.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d",
 			LangRussian: "" +
-				"Во время входа в Retro WFC\n" +
+				"Во время входа в IKWFC\n" +
 				"произошла ошибка.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
@@ -56,7 +56,7 @@ var (
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
 				"Une erreur inconnue s'est produite\n" +
-				"pendant la connexion à Retro WFC.\n" +
+				"pendant la connexion à IKWFC.\n" +
 				"\n" +
 				"Code Erreur:  %[1]d",
 		},
@@ -66,59 +66,59 @@ var (
 		ErrorCode: 22001,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Dolphinで Retro WFCに接続するには\n" +
+				"Dolphinで IKWFCに接続するには\n" +
 				"ついかの セットアップが必要です\n" +
 				"\n" +
 				"エラーコード： %[1]d",
 			LangEnglish: "" +
 				"Additional setup is required\n" +
-				"to use Retro WFC on Dolphin.\n" +
+				"to use IKWFC on Dolphin.\n" +
 				"\n" +
 				"Error Code: %[1]d",
 			LangGerman: "" +
-				"Für die Verwendung von Retro WFC auf Dolphin\n" +
+				"Für die Verwendung von IKWFC auf Dolphin\n" +
 				"ist eine zusätzliche Einrichtung erforderlich.\n" +
 				"\n" +
 				"Fehlercode: %[1]d",
 			LangSpanish: "" +
 				"Se requiere una instalación adicional\n" +
-				"para poder usar Retro WFC en Dolphin.\n" +
+				"para poder usar IKWFC en Dolphin.\n" +
 				"\n" +
 				"Código de error: %[1]d",
 			LangItalian: "" +
 				"Un'ulteriore installazione è necessaria\n" +
-				"per usare la Retro WFC su Dolphin.\n" +
+				"per usare la IKWFC su Dolphin.\n" +
 				"\n" +
 				"Codice Errore: %[1]d",
 			LangDutch: "" +
-				"Extra instellingen zijn vereist\n" +
-				"om Retro WFC op Dolphin te gebruiken.\n" +
+				"Verdere configuraties zijn vereist\n" +
+				"om IKWFC op Dolphin te gebruiken.\n" +
 				"\n" +
 				"Foutcode: %[1]d",
 			LangKorean: "" +
-				"돌핀에서 Retro WFC를 사용하려면\n" +
+				"돌핀에서 IKWFC를 사용하려면\n" +
 				"추가 작업이 필요합니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d",
 			LangCzech: "" +
-				"K použití Retro WFC na Dolphinu\n" +
+				"K použití IKWFC na Dolphinu\n" +
 				"je nutné další nastavení.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d",
 			LangRussian: "" +
-				"Чтобы играть по Retro WFC\n" +
+				"Чтобы играть по IKWFC\n" +
 				"в Dolphin, необходимо провести\n" +
 				"дополнительную настройку.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
 			LangTurkish: "" +
-				"Retro WFC'yi Dolphin'de kullanabilmek\n" +
+				"IKWFC'yi Dolphin'de kullanabilmek\n" +
 				"için birkaç adım daha gerekiyor.\n" +
 				"\n" +
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
 				"Une installation additionnelle est requise\n" +
-				"pour utiliser Retro WFC sur Dolphin.\n" +
+				"pour utiliser IKWFC sur Dolphin.\n" +
 				"\n" +
 				"Code Erreur: %[1]d",
 		},
@@ -129,40 +129,40 @@ var (
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
 				"利用きやくに いはんしたため\n" +
-				"Retro WFCから BANされました\n" +
+				"IKWFCから BANされました\n" +
 				"\n" +
 				"エラーコード： %[1]d\n" +
 				"サポート情報： NG%08[2]x",
 			LangEnglish: "" +
-				"You are banned from Retro WFC\n" +
+				"You are banned from IKWFC\n" +
 				"due to a violation of the\n" +
 				"Terms of Service.\n" +
 				"\n" +
 				"Error Code: %[1]d\n" +
 				"Support Info: NG%08[2]x",
 			LangGerman: "" +
-				"Du wurdest von Retro WFC\n" +
+				"Du wurdest von IKWFC\n" +
 				"wegen eines Verstoßes der\n" +
 				"Terms of Service gebannt.\n" +
 				"\n" +
 				"Fehlercode: %[1]d\n" +
 				"Support-Info: NG%08[2]x",
 			LangSpanish: "" +
-				"Te han baneado de Retro WFC\n" +
+				"Te han baneado de IKWFC\n" +
 				"debido a una violación de los\n" +
 				"Terminos de Servicio.\n" +
 				"\n" +
 				"Código de Error: %[1]d\n" +
 				"Información de soporte: NG%08[2]x",
 			LangItalian: "" +
-				"Sei stato bannato dalla Retro WFC\n" +
+				"Sei stato bannato dalla IKWFC\n" +
 				"a causa di una violazione dei\n" +
 				"Termini di Servizio.\n" +
 				"\n" +
 				"Codice Errore: %[1]d\n" +
 				"Supporto Informativo: NG%08[2]x",
 			LangDutch: "" +
-				"Je bent verbannen van Retro WFC\n" +
+				"Je bent verbannen van IKWFC\n" +
 				"vanwege een overtreding van de\n" +
 				"gebruiksvoorwaarden.\n" +
 				"\n" +
@@ -170,13 +170,13 @@ var (
 				"Ondersteuningsinformatie: NG%08[2]x",
 			LangKorean: "" +
 				"이용약관 위반으로\n" +
-				"Retro WFC 계정이\n" +
+				"IKWFC 계정이\n" +
 				"정지됐습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d\n" +
 				"지원 정보: NG%08[2]x",
 			LangCzech: "" +
-				"Máš zákaz Retro WFC\n" +
+				"Máš zákaz IKWFC\n" +
 				"z důvodu porušení\n" +
 				"Podmínek Služby.\n" +
 				"\n" +
@@ -191,13 +191,13 @@ var (
 				"Информация для поддержки: NG%08[2]x",
 			LangTurkish: "" +
 				"Hizmet Şartlarını ihlal ettiğinizden\n" +
-				"dolayı Retro WFC'ye erişiminiz\n" +
+				"dolayı IKWFC'ye erişiminiz\n" +
 				"yasaklanmıştır.\n" +
 				"\n" +
 				"Hata Kodu: %[1]d\n" +
 				"Destek Bilgisi: NG%08[2]x",
 			LangFrenchEU: "" +
-				"Vous avez été banni(e) de Retro WFC\n" +
+				"Vous avez été banni(e) de IKWFC\n" +
 				"à cause d'une violation des\n" +
 				"Conditions de Service.\n" +
 				"\n" +
@@ -211,26 +211,26 @@ var (
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
 				"利用きやくに いはんしたため\n" +
-				"Retro WFCから BANされています\n" +
+				"IKWFCから BANされています\n" +
 				"\n" +
 				"エラーコード： %[1]d\n" +
 				"サポート情報： NG%08[2]x",
 			LangEnglish: "" +
-				"You are banned from Retro WFC\n" +
+				"You are banned from IKWFC\n" +
 				"due to a violation of the\n" +
 				"Terms of Service.\n" +
 				"\n" +
 				"Error Code: %[1]d\n" +
 				"Support Info: NG%08[2]x",
 			LangGerman: "" +
-				"Du wurdest von Retro WFC\n" +
+				"Du wurdest von IKWFC\n" +
 				"wegen eines Verstoßes der\n" +
 				"Terms of Service gebannt.\n" +
 				"\n" +
 				"Fehlercode: %[1]d\n" +
 				"Support-Info: NG%08[2]x",
 			LangSpanish: "" +
-				"Te han baneado de Retro WFC\n" +
+				"Te han baneado de IKWFC\n" +
 				"debido a una violación de los\n" +
 				"Terminos de Servicio.\n" +
 				"\n" +
@@ -238,13 +238,13 @@ var (
 				"Información de soporte: NG%08[2]x",
 			LangItalian: "" +
 				"Sei stato bannato dalla\n" +
-				"Retro WFC a causa di una violazione\n" +
+				"IKWFC a causa di una violazione\n" +
 				"dei Termini di Servizio.\n" +
 				"\n" +
 				"Codice Errore: %[1]d\n" +
 				"Supporto Informativo: NG%08[2]x",
 			LangDutch: "" +
-				"Je bent verbannen van Retro WFC\n" +
+				"Je bent verbannen van IKWFC\n" +
 				"vanwege een overtreding van de\n" +
 				"gebruiksvoorwaarden.\n" +
 				"\n" +
@@ -252,13 +252,13 @@ var (
 				"Ondersteuningsinformatie: NG%08[2]x",
 			LangKorean: "" +
 				"이용약관 위반으로\n" +
-				"Retro WFC 계정이\n" +
+				"IKWFC 계정이\n" +
 				"정지됐습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d\n" +
 				"지원 정보: NG%08[2]x",
 			LangCzech: "" +
-				"Máš zákaz Retro WFC\n" +
+				"Máš zákaz IKWFC\n" +
 				"z důvodu porušení\n" +
 				"Podmínek Služby.\n" +
 				"\n" +
@@ -266,20 +266,20 @@ var (
 				"Informace o Podpoře: NG%08[2]x",
 			LangRussian: "" +
 				"Отныне вам запрещено играть\n" +
-				"в Retro WFC из-за нарушения\n" +
+				"в IKWFC из-за нарушения\n" +
 				"условий использования сервиса.\n" +
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
 			LangTurkish: "" +
 				"Hizmet Şartlarını ihlal ettiğinizden\n" +
-				"dolayı Retro WFC'ye erişiminiz\n" +
+				"dolayı IKWFC'ye erişiminiz\n" +
 				"yasaklanmıştır.\n" +
 				"\n" +
 				"Hata Kodu: %[1]d\n" +
 				"Destek Bilgisi: NG%08[2]x",
 			LangFrenchEU: "" +
-				"Vous avez été banni(e) de Retro WFC\n" +
+				"Vous avez été banni(e) de IKWFC\n" +
 				"à cause d'une violation des\n" +
 				"Conditions de Service.\n" +
 				"\n" +
@@ -292,7 +292,7 @@ var (
 		ErrorCode: 22003,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Retro WFCの ルールにいはんしたため\n" +
+				"IKWFCの ルールにいはんしたため\n" +
 				"オンライン対戦から BANされました\n" +
 				"\n" +
 				"エラーコード： %[1]d\n" +
@@ -300,40 +300,40 @@ var (
 			LangEnglish: "" +
 				"You are banned from public\n" +
 				"matches due to a violation\n" +
-				"of the Retro WFC Rules.\n" +
+				"of the IKWFC Rules.\n" +
 				"\n" +
 				"Error Code: %[1]d\n" +
 				"Support Info: NG%08[2]x",
 			LangGerman: "" +
 				"Du wurdest von öffentl. Räumen\n" +
 				"wegen eines Verstoßes der\n" +
-				"Retro WFC Regeln gebannt.\n" +
+				"IKWFC Regeln gebannt.\n" +
 				"\n" +
 				"Fehlercode: %[1]d\n" +
 				"Support-Info: NG%08[2]x",
 			LangSpanish: "" +
 				"Te han baneado de partidas públicas\n" +
 				"debido a una violación de las\n" +
-				"reglas de Retro WFC.\n" +
+				"reglas de IKWFC.\n" +
 				"\n" +
 				"Código de Error: %[1]d\n" +
 				"Información de soporte: NG%08[2]x",
 			LangItalian: "" +
 				"Sei stato bannato dalle corse\n" +
 				"pubbliche a causa di una violazione\n" +
-				"delle regole della Retro WFC.\n" +
+				"delle regole della IKWFC.\n" +
 				"\n" +
 				"Codice Errore: %[1]d\n" +
 				"Supporto Informativo: NG%08[2]x",
 			LangDutch: "" +
 				"Je bent verbannen van openbare\n" +
 				"wedstrijden vanwege een overtreding\n" +
-				"van de Retro WFC-regels.\n" +
+				"van de IKWFC-regels.\n" +
 				"\n" +
 				"Foutcode: %[1]d\n" +
 				"Ondersteuningsinformatie: NG%08[2]x",
 			LangKorean: "" +
-				"Retro WFC 규정 위반으로\n" +
+				"IKWFC 규정 위반으로\n" +
 				"공개 경기에서 차단됐습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d\n" +
@@ -341,19 +341,19 @@ var (
 			LangCzech: "" +
 				"Máš zákaz veřejných\n" +
 				"zápasů z důvodu porušení\n" +
-				"pravidel Retro WFC.\n" +
+				"pravidel IKWFC.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d\n" +
 				"Informace o Podpoře: NG%08[2]x",
 			LangRussian: "" +
 				"Вам запрещено участвовать\n" +
 				"в публичных играх из-за\n" +
-				"нарушения правил Retro WFC.\n" +
+				"нарушения правил IKWFC.\n" +
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
 			LangTurkish: "" +
-				"Retro WFC kurallarını ihlal\n" +
+				"IKWFC kurallarını ihlal\n" +
 				"ettiğinizden dolayı herkese\n" +
 				"açık yarışlara erişiminiz yasaklanmıştır.\n" +
 				"\n" +
@@ -362,7 +362,7 @@ var (
 			LangFrenchEU: "" +
 				"Vous avez été banni(e) des matchs\n" +
 				"public à cause d'un violation d'une\n" +
-				"des règles de Retro WFC.\n" +
+				"des règles de IKWFC.\n" +
 				"\n" +
 				"Code Erreur:  %[1]d\n" +
 				"Information Support: NG%08[2]x",
@@ -373,7 +373,7 @@ var (
 		ErrorCode: 22003,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Retro WFCの ルールにいはんしたため\n" +
+				"IKWFCの ルールにいはんしたため\n" +
 				"オンライン対戦から BANされています\n" +
 				"\n" +
 				"エラーコード： %[1]d\n" +
@@ -381,40 +381,40 @@ var (
 			LangEnglish: "" +
 				"You have been banned from public\n" +
 				"matches due to a violation\n" +
-				"of the Retro WFC Rules.\n" +
+				"of the IKWFC Rules.\n" +
 				"\n" +
 				"Error Code: %[1]d\n" +
 				"Support Info: NG%08[2]x",
 			LangGerman: "" +
 				"Du wurdest von öffentl. Räumen\n" +
 				"wegen eines Verstoßes der\n" +
-				"Retro WFC Regeln gebannt.\n" +
+				"IKWFC Regeln gebannt.\n" +
 				"\n" +
 				"Fehlercode: %[1]d\n" +
 				"Support-Info: NG%08[2]x,",
 			LangSpanish: "" +
 				"Te han baneado de partidas públicas\n" +
 				"debido a una violación de las\n" +
-				"reglas de Retro WFC.\n" +
+				"reglas de IKWFC.\n" +
 				"\n" +
 				"Código de Error: %[1]d\n" +
 				"Información de soporte: NG%08[2]x",
 			LangItalian: "" +
 				"Sei stato bannato dalle corse\n" +
 				"pubbliche a causa di una violazione\n" +
-				"delle regole della Retro WFC.\n" +
+				"delle regole della IKWFC.\n" +
 				"\n" +
 				"Codice Errore: %[1]d\n" +
 				"Supporto Informativo: NG%08[2]x",
 			LangDutch: "" +
 				"Je bent verbannen van openbare\n" +
 				"wedstrijden vanwege een overtreding\n" +
-				"van de Retro WFC-regels.\n" +
+				"van de IKWFC-regels.\n" +
 				"\n" +
 				"Foutcode: %[1]d\n" +
 				"Ondersteuningsinformatie: NG%08[2]x",
 			LangKorean: "" +
-				"Retro WFC 규정 위반으로\n" +
+				"IKWFC 규정 위반으로\n" +
 				"공개 경기에서 차단됐습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d\n" +
@@ -422,19 +422,19 @@ var (
 			LangCzech: "" +
 				"Máš zákaz veřejných\n" +
 				"zápasů z důvodu porušení\n" +
-				"pravidel Retro WFC.\n" +
+				"pravidel IKWFC.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d\n" +
 				"Informace o Podpoře: NG%08[2]x",
 			LangRussian: "" +
 				"Отныне вам запрещено участвовать\n" +
 				"в публичных играх из-за нарушения\n" +
-				"правил Retro WFC.\n" +
+				"правил IKWFC.\n" +
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
 			LangTurkish: "" +
-				"Retro WFC kurallarını ihlal\n" +
+				"IKWFC kurallarını ihlal\n" +
 				"ettiğinizden dolayı herkese\n" +
 				"açık yarışlara erişiminiz yasaklanmıştır.\n" +
 				"\n" +
@@ -443,7 +443,7 @@ var (
 			LangFrenchEU: "" +
 				"Vous avez été banni(e) des matchs\n" +
 				"publics à cause d'un violation d'une\n" +
-				"des règles de Retro WFC.\n" +
+				"des règles de IKWFC.\n" +
 				"\n" +
 				"Code Erreur:  %[1]d\n" +
 				"Information Support: NG%08[2]x",
@@ -582,53 +582,53 @@ var (
 		ErrorCode: 22004,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Retro WFCから キックされました\n" +
+				"IKWFCから キックされました\n" +
 				"\n" +
 				"エラーコード： %[1]d",
 			LangEnglish: "" +
 				"You have been kicked from\n" +
-				"Retro WFC.\n" +
+				"IKWFC.\n" +
 				"\n" +
 				"Error Code: %[1]d",
 			LangGerman: "" +
-				"Du wurdest aus Retro WFC\n" +
+				"Du wurdest aus IKWFC\n" +
 				"gekickt.\n" +
 				"\n" +
 				"Fehlercode: %[1]d",
 			LangSpanish: "" +
-				"Te han expulsado de Retro WFC.\n" +
+				"Te han expulsado de IKWFC.\n" +
 				"\n" +
 				"Código de Error: %[1]d",
 			LangItalian: "" +
 				"Sei stato espulso\n" +
-				"dalla Retro WFC.\n" +
+				"dalla IKWFC.\n" +
 				"\n" +
 				"Codice Errore: %[1]d",
 			LangDutch: "" +
-				"Je bent uit Retro WFC\n" +
+				"Je bent uit IKWFC\n" +
 				"geschopt.\n" +
 				"\n" +
 				"Foutcode: %[1]d",
 			LangKorean: "" +
-				"Retro WFC에서 추방됐습니다.\n" +
+				"IKWFC에서 추방됐습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d",
 			LangCzech: "" +
 				"Byl jsi vyhozen z\n" +
-				"Retro WFC.\n" +
+				"IKWFC.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d",
 			LangRussian: "" +
-				"Вас выгнали из Retro WFC.\n" +
+				"Вас выгнали из IKWFC.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
 			LangTurkish: "" +
-				"Retro WFC'den atıldınız.\n" +
+				"IKWFC'den atıldınız.\n" +
 				"\n" +
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
 				"Vous avez été expulsé de\n" +
-				"Retro WFC.\n" +
+				"IKWFC.\n" +
 				"\n" +
 				"Code Erreur: %[1]d",
 		},
@@ -638,58 +638,58 @@ var (
 		ErrorCode: 22004,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Retro WFCの モデレーターから\n" +
+				"IKWFCの モデレーターから\n" +
 				"キックされました\n" +
 				"\n" +
 				"エラーコード： %[1]d",
 			LangEnglish: "" +
 				"You have been kicked from\n" +
-				"Retro WFC by a moderator.\n" +
+				"IKWFC by a moderator.\n" +
 				"\n" +
 				"Error Code: %[1]d",
 			LangGerman: "" +
 				"Du wurdest von einem Moderator\n" +
-				"aus Retro WFC gekickt.\n" +
+				"aus IKWFC gekickt.\n" +
 				"\n" +
 				"Fehlercode: %[1]d",
 			LangSpanish: "" +
 				"Un moderador te ha\n" +
-				"expulsado de Retro WFC.\n" +
+				"expulsado de IKWFC.\n" +
 				"\n" +
 				"Código de Error: %[1]d",
 			LangItalian: "" +
 				"Sei stato espulso dalla\n" +
-				"Retro WFC da un moderatore.\n" +
+				"IKWFC da un moderatore.\n" +
 				"\n" +
 				"Codice Errore: %[1]d",
 			LangDutch: "" +
-				"Je bent uit Retro WFC\n" +
+				"Je bent uit IKWFC\n" +
 				"geschopt door een moderator.\n" +
 				"\n" +
 				"Foutcode: %[1]d",
 			LangKorean: "" +
-				"관리자에 의해 Retro WFC에서\n" +
+				"관리자에 의해 IKWFC에서\n" +
 				"추방됐습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d",
 			LangCzech: "" +
 				"Byl jsi vyhozen z\n" +
-				"Retro WFC moderátorem.\n" +
+				"IKWFC moderátorem.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d",
 			LangRussian: "" +
 				"Модератор выгнал вас\n" +
-				"из Retro WFC.\n" +
+				"из IKWFC.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
 			LangTurkish: "" +
 				"Bir moderatör tarafından\n" +
-				"Retro WFC'den atıldınız.\n" +
+				"IKWFC'den atıldınız.\n" +
 				"\n" +
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
 				"Vous avez été expulsé de\n" +
-				"Retro WFC par un modérateur.\n" +
+				"IKWFC par un modérateur.\n" +
 				"\n" +
 				"Code Erreur: %[1]d",
 		},
@@ -758,36 +758,36 @@ var (
 		ErrorCode: 22004,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Retro WFCから キックされました\n" +
+				"IKWFCから キックされました\n" +
 				"りゆう： %[3]s\n" +
 				"エラーコード： %[1]d",
 			LangEnglish: "" +
 				"You have been kicked from\n" +
-				"Retro WFC.\n" +
+				"IKWFC.\n" +
 				"Reason: %[3]s\n" +
 				"Error Code: %[1]d",
 			LangGerman: "" +
-				"Du wurdest aus Retro WFC\n" +
+				"Du wurdest aus IKWFC\n" +
 				"gekickt.\n" +
 				"Grund: %[3]s\n" +
 				"Fehlercode: %[1]d,",
 			LangSpanish: "" +
-				"Te han expulsado de Retro WFC.\n" +
+				"Te han expulsado de IKWFC.\n" +
 				"Motivo: %[3]s\n" +
 				"\n" +
 				"Código de Error: %[1]d",
 			LangItalian: "" +
 				"Sei stato espulso\n" +
-				"dalla Retro WFC.\n" +
+				"dalla IKWFC.\n" +
 				"Motivo: %[3]s\n" +
 				"Codice Errore: %[1]d",
 			LangDutch: "" +
-				"Je bent uit Retro WFC\n" +
+				"Je bent uit IKWFC\n" +
 				"geschopt.\n" +
 				"Reden: %[3]s\n" +
 				"Foutcode: %[1]d",
 			LangKorean: "" +
-				"Retro WFC에서 추방됐습니다.\n" +
+				"IKWFC에서 추방됐습니다.\n" +
 				"\n" +
 				"사유: %[3]s\n" +
 				"에러 코드: %[1]d",
@@ -797,18 +797,18 @@ var (
 				"Kód Chyby: %[1]d\n" +
 				"Informace o Podpoře: NG%08[2]x",
 			LangRussian: "" +
-				"Вас выгнали из Retro WFC.\n" +
+				"Вас выгнали из IKWFC.\n" +
 				"\n" +
 				"Причина: %[3]s\n" +
 				"Код ошибки: %[1]d",
 			LangTurkish: "" +
-				"Retro WFC'den atıldınız.\n" +
+				"IKWFC'den atıldınız.\n" +
 				"\n" +
 				"Sebep: %[3]s\n" +
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
 				"Vous avez été expulsé de\n" +
-				"Retro WFC.\n" +
+				"IKWFC.\n" +
 				"Raison: %[3]s\n" +
 				"Error Code: %[1]d",
 		},
@@ -1100,57 +1100,57 @@ var (
 		ErrorCode: 22008,
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
-				"Retro WFCの ペイロードがむこうです\n" +
+				"IKWFCの ペイロードがむこうです\n" +
 				"ゲームを 再起動してください\n" +
 				"\n" +
 				"エラーコード： %[1]d",
 			LangEnglish: "" +
-				"The Retro WFC payload is invalid.\n" +
+				"The IKWFC payload is invalid.\n" +
 				"Try restarting your game.\n" +
 				"\n" +
 				"Error Code: %[1]d",
 			LangGerman: "" +
-				"Der Retro WFC payload ist ungültig.\n" +
+				"Der IKWFC payload ist ungültig.\n" +
 				"Versuche das Spiel neu zu starten.\n" +
 				"\n" +
 				"Fehlercode: %[1]d",
 			LangSpanish: "" +
-				"Retro WFC no cargó correctamente\n" +
+				"IKWFC no cargó correctamente\n" +
 				"Intente reiniciar su juego.\n" +
 				"\n" +
 				"Código de error: %[1]d",
 			LangItalian: "" +
-				"Il payload della Retro WFC non è valido.\n" +
+				"Il payload della IKWFC non è valido.\n" +
 				"Prova a riavviare il gioco.\n" +
 				"\n" +
 				"Codice Errore: %[1]d",
 			LangDutch: "" +
-				"De Retro WFC-payload is ongeldig.\n" +
+				"De IKWFC-payload is ongeldig.\n" +
 				"Probeer het spel opnieuw op te starten.\n" +
 				"\n" +
 				"Foutcode: %[1]d",
 			LangKorean: "" +
-				"Retro WFC 페이로드가 잘못됐습니다.\n" +
+				"IKWFC 페이로드가 잘못됐습니다.\n" +
 				"게임을 재시작 하십시오.\n" +
 				"\n" +
 				"에러 코드: %[1]d",
 			LangCzech: "" +
-				"Datový obsah Retro WFC je neplatné.\n" +
+				"Datový obsah IKWFC je neplatné.\n" +
 				"Zkus restartovat hru.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d",
 			LangRussian: "" +
 				"Запущен некорректный пейлоад.\n" +
-				"Retro WFC. Перезапустите игру.\n" +
+				"IKWFC. Перезапустите игру.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
 			LangTurkish: "" +
-				"Retro WFC payloud'u geçerli değil.\n" +
+				"IKWFC payloud'u geçerli değil.\n" +
 				"Oyunu yeniden başlatmayı deneyin.\n" +
 				"\n" +
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
-				"Le payload Retro WFC est invalide.\n" +
+				"Le payload IKWFC est invalide.\n" +
 				"Veuillez redémarrer votre jeu.\n" +
 				"\n" +
 				"Code Erreur: %[1]d",
@@ -1162,17 +1162,17 @@ var (
 		MessageRMC: map[byte]string{
 			LangJapanese: "" +
 				"VRまたはBRの値が むこうなため\n" +
-				"Retro WFCから 切断されました\n" +
+				"IKWFCから 切断されました\n" +
 				"\n" +
 				"エラーコード： %[1]d",
 			LangEnglish: "" +
 				"You were disconnected from\n" +
-				"Retro WFC due to an invalid\n" +
+				"IKWFC due to an invalid\n" +
 				"VR or BR value.\n" +
 				"\n" +
 				"Error Code: %[1]d",
 			LangGerman: "" +
-				"Deine Verbindung zu Retro WFC\n" +
+				"Deine Verbindung zu IKWFC\n" +
 				"durch einen ungültigen VR oder BR\n" +
 				"Wert beendet.\n" +
 				"\n" +
@@ -1183,42 +1183,42 @@ var (
 				"\n" +
 				"Código de error: %[1]d",
 			LangItalian: "" +
-				"Sei stato disconnesso dalla Retro WFC\n" +
+				"Sei stato disconnesso dalla IKWFC\n" +
 				"a causa di un valore non valido\n" +
 				"di punti corsa o punti battaglia.\n" +
 				"\n" +
 				"Codice Errore: %[1]d",
 			LangDutch: "" +
-				"Je verbinding met Retro WFC is verbroken\n" +
+				"Je verbinding met IKWFC is verbroken\n" +
 				"vanwege een ongeldige rp- of gp-waarde.\n" +
 				"\n" +
 				"Foutcode: %[1]d",
 			LangKorean: "" +
 				"잘못된 VR 또는 BR 값으로 인해\n" +
-				"Retro WFC 연결이 끊어졌습니다.\n" +
+				"IKWFC 연결이 끊어졌습니다.\n" +
 				"\n" +
 				"에러 코드: %[1]d",
 			LangCzech: "" +
-				"Byl jsi odpojen od Retro WFC\n" +
+				"Byl jsi odpojen od IKWFC\n" +
 				"z důvodu neplatné hodnoty\n" +
 				"ZH nebo BH.\n" +
 				"\n" +
 				"Kód Chyby: %[1]d",
 			LangRussian: "" +
-				"Вас отключили от Retro WFC\n" +
+				"Вас отключили от IKWFC\n" +
 				"из-за некорректного значения\n" +
 				"ГР или БР.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
 			LangTurkish: "" +
 				"Hatalı bir KP veya SP\n" +
-				"değerinden dolayı Retro WFC'ye\n" +
+				"değerinden dolayı IKWFC'ye\n" +
 				"bağlantınız kesildi.\n" +
 				"\n" +
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
 				"Vous avez été déconnecté de\n" +
-				"Retro WFC à cause d'une valeur invalide\n" +
+				"IKWFC à cause d'une valeur invalide\n" +
 				"de Points Course ou Points Bataille.\n" +
 				"\n" +
 				"Code Erreur: %[1]d",
@@ -1240,6 +1240,12 @@ var (
 				"das Pack neu um dich einzuloggen.\n" +
 				"\n" +
 				"Error Code: %[1]d",
+			LangDutch: "" +
+				"Ongeldige modpack versie!\n" +
+				"Update of herinstalleer de modpack\n" +
+				"om in te loggen.\n" +
+				"\n" +
+				"Foutcode: %[1]d",
 		},
 	}
 
